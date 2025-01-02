@@ -1,6 +1,6 @@
 "use client";
 
-import { useAuth } from '../lib/hooks/useAuth';
+//import { useAuth } from '../lib/hooks/useAuth';
 
 export default function SignInWithGoogle() { // Need to use aws amplify for this and configure cognito
  // const { signInWithGoogle } = useAuth();

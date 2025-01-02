@@ -93,6 +93,30 @@ export class WebAppStack extends cdk.Stack {
     // Ensure deployment trigger happens after branch is created
     triggerDeployment.node.addDependency(main);
 
+    // Add a custom resource to trigger build
+    const triggerBuild = new cr.AwsCustomResource(this, 'TriggerBuild', {
+      onCreate: {
+        service: 'Amplify',
+        action: 'startJob',
+        parameters: {
+          appId: amplifyApp.appId,
+          branchName: 'main',
+          jobType: 'RELEASE'
+        },
+        physicalResourceId: cr.PhysicalResourceId.of('BuildTrigger')
+      },
+      policy: cr.AwsCustomResourcePolicy.fromStatements([
+        new iam.PolicyStatement({
+          effect: iam.Effect.ALLOW,
+          actions: ['amplify:StartJob'],
+          resources: [`arn:aws:amplify:${this.region}:${this.account}:apps/${amplifyApp.appId}/branches/main/*`]
+        })
+      ])
+    });
+
+    // Ensure build trigger happens after branch creation
+    triggerBuild.node.addDependency(main);
+
     // Output the App details
     new cdk.CfnOutput(this, 'AmplifyAppId', {
       value: amplifyApp.appId,
