@@ -13,10 +13,13 @@
     "cdk:diff": "cdk diff"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^1.0.12",
     "@aws-amplify/adapter-nextjs": "^1.0.12",
     "@aws-amplify/ui-react": "^6.0.12",
+    "ai": "^4.0.23",
     "aws-amplify": "^6.0.12",
     "next": "13.5.8",
+    "openai": "^4.24.1",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.51.0"
