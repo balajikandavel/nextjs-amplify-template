@@ -2,12 +2,31 @@ import * as cdk from 'aws-cdk-lib';
 import * as amplify from '@aws-cdk/aws-amplify-alpha';
 import * as codebuild from 'aws-cdk-lib/aws-codebuild';
 import * as iam from 'aws-cdk-lib/aws-iam';
+import * as ssm from 'aws-cdk-lib/aws-ssm';
 import * as cr from 'aws-cdk-lib/custom-resources';
 import { Construct } from 'constructs';
 
 export class WebAppStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
+
+    // Create a custom resource to fetch the SSM parameter
+    const getParameter = new cr.AwsCustomResource(this, 'GetOpenAIKey', {
+      onCreate: {
+        service: 'SSM',
+        action: 'getParameter',
+        parameters: {
+          Name: '/next-app/openai-api-key',
+          WithDecryption: true
+        },
+        physicalResourceId: cr.PhysicalResourceId.of('OpenAIKeyParameter')
+      },
+      policy: cr.AwsCustomResourcePolicy.fromSdkCalls({
+        resources: [
+          `arn:aws:ssm:${this.region}:${this.account}:parameter/next-app/openai-api-key`
+        ]
+      })
+    });
 
     // Create Amplify App
     const amplifyApp = new amplify.App(this, 'NextJsAmplifyApp', {
@@ -23,17 +42,27 @@ export class WebAppStack extends cdk.Stack {
           phases: {
             preBuild: {
               commands: [
-                'yarn install --frozen-lockfile'
+                'set -x',
+                'yarn --version',
+                'node --version',
+                'pwd',
+                'ls -la',
+                'yarn install --frozen-lockfile',
+                'yarn add encoding',
+                'yarn list typescript @types/node',
+                'ls -la node_modules/.bin/tsc || true'
               ]
             },
             build: {
               commands: [
-                'yarn build',
-                'cp -r public/* .next/static/',
-                'cp -r .next/static/* .next/standalone/.next/static/',
+                'set -x',
+                'yarn build || { echo "Build failed with:"; cat .next/error.log; exit 1; }',
+                'mkdir -p .next/standalone/.next/static',
+                'cp -r .next/static/* .next/standalone/.next/static/ || true',
+                'cp -r public/* .next/standalone/public/ || true',
                 'cp package.json .next/standalone/',
                 'cd .next/standalone',
-                'yarn install --production'
+                'yarn install --production --ignore-scripts'
               ]
             }
           },
@@ -54,7 +83,8 @@ export class WebAppStack extends cdk.Stack {
       platform: amplify.Platform.WEB_COMPUTE,
       environmentVariables: {
         NODE_ENV: 'production',
-        PORT: '8080'
+        PORT: '8080',
+        DEBUG: '*'
       }
     });
 
@@ -64,58 +94,10 @@ export class WebAppStack extends cdk.Stack {
       stage: 'PRODUCTION',
       environmentVariables: {
         NODE_ENV: 'production',
-        PORT: '8080'
+        PORT: '8080',
+        OPENAI_API_KEY: getParameter.getResponseField('Parameter.Value')
       }
     });
-
-    // Create a custom resource to trigger initial deployment
-    const triggerDeployment = new cr.AwsCustomResource(this, 'TriggerDeployment', {
-      onCreate: {
-        service: 'Amplify',
-        action: 'startJob',
-        parameters: {
-          appId: amplifyApp.appId,
-          branchName: main.branchName,
-          jobType: 'RELEASE',
-          jobReason: 'Initial deployment via CDK'
-        },
-        physicalResourceId: cr.PhysicalResourceId.of('InitialDeployment')
-      },
-      policy: cr.AwsCustomResourcePolicy.fromStatements([
-        new iam.PolicyStatement({
-          effect: iam.Effect.ALLOW,
-          actions: ['amplify:StartJob'],
-          resources: [`arn:aws:amplify:${this.region}:${this.account}:apps/${amplifyApp.appId}/branches/${main.branchName}/*`]
-        })
-      ])
-    });
-
-    // Ensure deployment trigger happens after branch is created
-    triggerDeployment.node.addDependency(main);
-
-    // Add a custom resource to trigger build
-    const triggerBuild = new cr.AwsCustomResource(this, 'TriggerBuild', {
-      onCreate: {
-        service: 'Amplify',
-        action: 'startJob',
-        parameters: {
-          appId: amplifyApp.appId,
-          branchName: 'main',
-          jobType: 'RELEASE'
-        },
-        physicalResourceId: cr.PhysicalResourceId.of('BuildTrigger')
-      },
-      policy: cr.AwsCustomResourcePolicy.fromStatements([
-        new iam.PolicyStatement({
-          effect: iam.Effect.ALLOW,
-          actions: ['amplify:StartJob'],
-          resources: [`arn:aws:amplify:${this.region}:${this.account}:apps/${amplifyApp.appId}/branches/main/*`]
-        })
-      ])
-    });
-
-    // Ensure build trigger happens after branch creation
-    triggerBuild.node.addDependency(main);
 
     // Output the App details
     new cdk.CfnOutput(this, 'AmplifyAppId', {

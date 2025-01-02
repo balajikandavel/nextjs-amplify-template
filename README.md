@@ -21,33 +21,32 @@ yarn dev
 
 ## Deployment to AWS Amplify
 
-1. Go to AWS Amplify Console (https://console.aws.amazon.com/amplify)
+### Prerequisites
 
-2. Click "New App" > "Host Web App"
+1. Configure GitHub App in AWS Console:
+   - Go to AWS Amplify Console
+   - Click on "Settings" > "GitHub Apps Configuration"
+   - Click "Install GitHub App" and follow the prompts
+   - Grant access to your repository
 
-3. Choose your Git provider:
-   - Connect your repository
-   - Select the branch you want to deploy
+### Deployment Steps
 
-4. Configure build settings:
-   - The `amplify.yml` file in your repository will be automatically detected
-   - Add the following environment variables:
-     ```
-     NEXT_PUBLIC_USER_POOL_ID=<Your Cognito User Pool ID>
-     NEXT_PUBLIC_USER_POOL_CLIENT_ID=<Your Cognito User Pool Client ID>
-     ```
-   - If you don't have a Cognito User Pool yet, you can create one in the AWS Console:
-     - Go to Amazon Cognito
-     - Create a new User Pool
-     - Enable email sign-in
-     - Create an app client
-     - Copy the User Pool ID and Client ID
+1. Deploy the CDK stack:
+   ```bash
+   yarn cdk deploy
+   ```
 
-5. Click "Save and deploy"
+2. The deployment will create:
+   - An Amplify app connected to your GitHub repository
+   - A main branch configured for automatic deployments
+   - Build and deployment configurations
 
-Your app will be deployed and available at the URL provided by AWS Amplify.
+3. Monitor the deployment:
+   - Go to AWS Amplify Console (link provided in CDK output)
+   - Check the build logs for any issues
+   - Once complete, your app will be available at the provided URL
 
-## Environment Variables
+### Environment Variables
 
 The following environment variables are required:
 
