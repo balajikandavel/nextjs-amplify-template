@@ -11,7 +11,7 @@ This is a Next.js application with AWS Amplify integration for authentication an
 ## Local Development
 Use below command when running yarn:
 ```bash
-nvm install 18.19.0 && nvm use 18.19.0 && export ARTIFACTORY_EMAIL=Balaji.Kandavel@coxautoinc.com && export ARTIFACTORY_TOKEN=YmFsYWppLmthbmRhdmVsQGNveGF1dG9pbmMuY29tOkFLQ3A4azhpTTdKY2ZDR2J2bXNmdGZuU3p4TWQ0RUQ2QlNMcVhreFp3RlhadW9QZnRBUjU1d1hpeHhRUldYeDhqRWpnenJGWGs= && yarn install
+nvm install 18.19.0 && nvm use 18.19.0 && yarn install
 ```
 
 Then run the development server:
