@@ -2,6 +2,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as amplify from '@aws-cdk/aws-amplify-alpha';
 import * as codebuild from 'aws-cdk-lib/aws-codebuild';
 import * as iam from 'aws-cdk-lib/aws-iam';
+import * as cr from 'aws-cdk-lib/custom-resources';
 import { Construct } from 'constructs';
 
 export class WebAppStack extends cdk.Stack {
@@ -11,14 +12,17 @@ export class WebAppStack extends cdk.Stack {
     // Create Amplify App
     const amplifyApp = new amplify.App(this, 'NextJsAmplifyApp', {
       appName: 'next-amplify-app',
+      sourceCodeProvider: new amplify.GitHubSourceCodeProvider({
+        owner: 'balajikandavel',
+        repository: 'nextjs-amplify-template',
+        oauthToken: cdk.SecretValue.secretsManager('github-token')
+      }),
       buildSpec: codebuild.BuildSpec.fromObjectToYaml({
         version: 1,
         frontend: {
           phases: {
             preBuild: {
               commands: [
-                'export ARTIFACTORY_EMAIL=Balaji.Kandavel@coxautoinc.com',
-                'export ARTIFACTORY_TOKEN=YmFsYWppLmthbmRhdmVsQGNveGF1dG9pbmMuY29tOkFLQ3A4azhpTTdKY2ZDR2J2bXNmdGZuU3p4TWQ0RUQ2QlNMcVhreFp3RlhadW9QZnRBUjU1d1hpeHhRUldYeDhqRWpnenJGWGs=',
                 'yarn install --frozen-lockfile'
               ]
             },
@@ -64,22 +68,30 @@ export class WebAppStack extends cdk.Stack {
       }
     });
 
-    // Create deployment role
-    const deployRole = new iam.Role(this, 'AmplifyDeployRole', {
-      assumedBy: new iam.ServicePrincipal('amplify.amazonaws.com'),
-      description: 'Role for Amplify to deploy the application',
+    // Create a custom resource to trigger initial deployment
+    const triggerDeployment = new cr.AwsCustomResource(this, 'TriggerDeployment', {
+      onCreate: {
+        service: 'Amplify',
+        action: 'startJob',
+        parameters: {
+          appId: amplifyApp.appId,
+          branchName: main.branchName,
+          jobType: 'RELEASE',
+          jobReason: 'Initial deployment via CDK'
+        },
+        physicalResourceId: cr.PhysicalResourceId.of('InitialDeployment')
+      },
+      policy: cr.AwsCustomResourcePolicy.fromStatements([
+        new iam.PolicyStatement({
+          effect: iam.Effect.ALLOW,
+          actions: ['amplify:StartJob'],
+          resources: [`arn:aws:amplify:${this.region}:${this.account}:apps/${amplifyApp.appId}/branches/${main.branchName}/*`]
+        })
+      ])
     });
 
-    deployRole.addToPolicy(new iam.PolicyStatement({
-      effect: iam.Effect.ALLOW,
-      resources: ['*'],
-      actions: [
-        'amplify:StartJob',
-        'amplify:StopJob',
-        'amplify:StartDeployment',
-        'amplify:StopDeployment'
-      ]
-    }));
+    // Ensure deployment trigger happens after branch is created
+    triggerDeployment.node.addDependency(main);
 
     // Output the App details
     new cdk.CfnOutput(this, 'AmplifyAppId', {

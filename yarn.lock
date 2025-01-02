@@ -878,22 +878,62 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@next/env@14.2.7":
-  "integrity" "sha512-OTx9y6I3xE/eih+qtthppwLytmpJVPM5PPoJxChFsbjIEFXIayG0h/xLzefHGJviAa3Q5+Fd+9uYojKkHDKxoQ=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/@next/env/-/env-14.2.7.tgz"
-  "version" "14.2.7"
+"@next/env@13.5.8":
+  "integrity" "sha512-YmiG58BqyZ2FjrF2+5uZExL2BrLr8RTQzLXNDJ8pJr0O+rPlOeDPXp1p1/4OrR3avDidzZo3D8QO2cuDv1KCkw=="
+  "resolved" "https://registry.npmjs.org/@next/env/-/env-13.5.8.tgz"
+  "version" "13.5.8"
 
-"@next/eslint-plugin-next@14.2.7":
-  "integrity" "sha512-+7xh142AdhZGjY9/L0iFo7mqRBMJHe+q+uOL+hto1Lfo9DeWCGcR6no4StlFbVSVcA6fQLKEX6y6qhMsSKbgNQ=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/@next/eslint-plugin-next/-/eslint-plugin-next-14.2.7.tgz"
-  "version" "14.2.7"
+"@next/eslint-plugin-next@13.5.8":
+  "integrity" "sha512-rmNr6kz5g7x2CQ/5RMmav7/wTGOFIv4fcP+bxawNaJP+Y5Gb0Dvq+omBUvL66pDo/fhWurElatelEFpHX+tMSw=="
+  "resolved" "https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-13.5.8.tgz"
+  "version" "13.5.8"
   dependencies:
-    "glob" "10.3.10"
+    "glob" "7.1.7"
 
-"@next/swc-darwin-arm64@14.2.7":
-  "integrity" "sha512-UhZGcOyI9LE/tZL3h9rs/2wMZaaJKwnpAyegUVDGZqwsla6hMfeSj9ssBWQS9yA4UXun3pPhrFLVnw5KXZs3vw=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/@next/swc-darwin-arm64/-/swc-darwin-arm64-14.2.7.tgz"
-  "version" "14.2.7"
+"@next/swc-darwin-arm64@13.5.8":
+  "integrity" "sha512-HkFw3QPeIy9bImWVTbsvzfEWQkuzBEQTK/L7ORMg+9sXNN0vNR5Gz/chD4/VbozTHyA38lWTrMBfLoWVpD+2IA=="
+  "resolved" "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-13.5.8.tgz"
+  "version" "13.5.8"
+
+"@next/swc-darwin-x64@13.5.8":
+  "integrity" "sha512-TpRTH5FyH4qGw0MCq6UE3yQGWtwhdDCwSE0wWcYwDWC5cpx3mGKVmAVKwDNbrpk0U5bl0tEzgxp5X4UPHWA81A=="
+  "resolved" "https://registry.npmjs.org/@next/swc-darwin-x64/-/swc-darwin-x64-13.5.8.tgz"
+  "version" "13.5.8"
+
+"@next/swc-linux-arm64-gnu@13.5.8":
+  "integrity" "sha512-KUPKuu4EZCCTU5M61YLpuL2fKMWQRijJLtBk2Hph8FJUx6RsNRDwS0MVlJqAr2IwjJwrNxYm5QAdQ1LuRbrZMw=="
+  "resolved" "https://registry.npmjs.org/@next/swc-linux-arm64-gnu/-/swc-linux-arm64-gnu-13.5.8.tgz"
+  "version" "13.5.8"
+
+"@next/swc-linux-arm64-musl@13.5.8":
+  "integrity" "sha512-hLyaBgXynyuVgqLwzcwF6loc0XuEz9zuK8XbzX5uslj3aqiw38l+qL1IJNLzHmkDX0nfVuBfIRV6QPsm0sCXnQ=="
+  "resolved" "https://registry.npmjs.org/@next/swc-linux-arm64-musl/-/swc-linux-arm64-musl-13.5.8.tgz"
+  "version" "13.5.8"
+
+"@next/swc-linux-x64-gnu@13.5.8":
+  "integrity" "sha512-IhxeEpi+U85GU9p6bVSAFMwuCNRdpmHueM8Z9DRft8f70Rvt3Q9tNFJxqLxAbiGoNOR7TuLNjAw2wJucHfMw3g=="
+  "resolved" "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-13.5.8.tgz"
+  "version" "13.5.8"
+
+"@next/swc-linux-x64-musl@13.5.8":
+  "integrity" "sha512-NQICDU7X/tcAVkTEfvpkq5Z1EViodDj3m18wiyJ5wpzOFf4LH7vFjLBVCWNcf3/sfqv/yfD8jshqrffOPtZitg=="
+  "resolved" "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-13.5.8.tgz"
+  "version" "13.5.8"
+
+"@next/swc-win32-arm64-msvc@13.5.8":
+  "integrity" "sha512-ndLIuFI/26CrhG+pqGkW+yPV/xuIijgaZbzPhujlDaUGczizzXgnI78iuisdPdGoMHLlQ9pRkFUeMGzENdyEHg=="
+  "resolved" "https://registry.npmjs.org/@next/swc-win32-arm64-msvc/-/swc-win32-arm64-msvc-13.5.8.tgz"
+  "version" "13.5.8"
+
+"@next/swc-win32-ia32-msvc@13.5.8":
+  "integrity" "sha512-9HUxSP76n8VbEtwZVNZDMY32Y4fm53ORaiopQkGQ4q54okYa5T8szhVkLTFKu4gaA/KJcJGvCC5dDIaqfSta1w=="
+  "resolved" "https://registry.npmjs.org/@next/swc-win32-ia32-msvc/-/swc-win32-ia32-msvc-13.5.8.tgz"
+  "version" "13.5.8"
+
+"@next/swc-win32-x64-msvc@13.5.8":
+  "integrity" "sha512-WFisiehrLrkX/nv6Vg7CUT6tdrhO6Nv0mLh5zuYQ5GLD4OnaOHkBt9iRkOziMy7ny+qF+V7023+loZIV/R9j8A=="
+  "resolved" "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.5.8.tgz"
+  "version" "13.5.8"
 
 "@nodelib/fs.scandir@2.1.5":
   "integrity" "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="
@@ -1720,17 +1760,11 @@
     "@smithy/types" "^3.7.2"
     "tslib" "^2.6.2"
 
-"@swc/counter@^0.1.3":
-  "integrity" "sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/@swc/counter/-/counter-0.1.3.tgz"
-  "version" "0.1.3"
-
-"@swc/helpers@0.5.5":
-  "integrity" "sha512-KGYxvIOXcceOAbEk4bi/dVLEK9z8sZ0uBB3Il5b1rhfClSpcX0yfRO0KmTkqR2cnQDymwLB+25ZyMzICg/cm/A=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/@swc/helpers/-/helpers-0.5.5.tgz"
-  "version" "0.5.5"
+"@swc/helpers@0.5.2":
+  "integrity" "sha512-E4KcWTpoLHqwPHLxidpOqQbcrZVgi0rsmmZXUle1jXmJfuIf/UWpczUJ7MZZ5tlxytgJXyp0w4PGkkeLiuIdZw=="
+  "resolved" "https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.2.tgz"
+  "version" "0.5.2"
   dependencies:
-    "@swc/counter" "^0.1.3"
     "tslib" "^2.4.0"
 
 "@types/aws-lambda@^8.10.134":
@@ -1776,37 +1810,37 @@
   "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/@types/uuid/-/uuid-9.0.8.tgz"
   "version" "9.0.8"
 
-"@typescript-eslint/parser@^5.4.2 || ^6.0.0 || 7.0.0 - 7.2.0":
-  "integrity" "sha512-5FKsVcHTk6TafQKQbuIVkXq58Fnbkd2wDL4LB7AURN7RUOu1utVP+G8+6u3ZhEroW3DF6hyo3ZEXxgKgp4KeCg=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/@typescript-eslint/parser/-/parser-7.2.0.tgz"
-  "version" "7.2.0"
+"@typescript-eslint/parser@^5.4.2 || ^6.0.0":
+  "integrity" "sha512-tbsV1jPne5CkFQCgPBcDOt30ItF7aJoZL997JSF7MhGQqOeT3svWRYxiqlfA5RUdlHN6Fi+EI9bxqbdyAUZjYQ=="
+  "resolved" "https://registry.npmjs.org/@typescript-eslint/parser/-/parser-6.21.0.tgz"
+  "version" "6.21.0"
   dependencies:
-    "@typescript-eslint/scope-manager" "7.2.0"
-    "@typescript-eslint/types" "7.2.0"
-    "@typescript-eslint/typescript-estree" "7.2.0"
-    "@typescript-eslint/visitor-keys" "7.2.0"
+    "@typescript-eslint/scope-manager" "6.21.0"
+    "@typescript-eslint/types" "6.21.0"
+    "@typescript-eslint/typescript-estree" "6.21.0"
+    "@typescript-eslint/visitor-keys" "6.21.0"
     "debug" "^4.3.4"
 
-"@typescript-eslint/scope-manager@7.2.0":
-  "integrity" "sha512-Qh976RbQM/fYtjx9hs4XkayYujB/aPwglw2choHmf3zBjB4qOywWSdt9+KLRdHubGcoSwBnXUH2sR3hkyaERRg=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/@typescript-eslint/scope-manager/-/scope-manager-7.2.0.tgz"
-  "version" "7.2.0"
+"@typescript-eslint/scope-manager@6.21.0":
+  "integrity" "sha512-OwLUIWZJry80O99zvqXVEioyniJMa+d2GrqpUTqi5/v5D5rOrppJVBPa0yKCblcigC0/aYAzxxqQ1B+DS2RYsg=="
+  "resolved" "https://registry.npmjs.org/@typescript-eslint/scope-manager/-/scope-manager-6.21.0.tgz"
+  "version" "6.21.0"
   dependencies:
-    "@typescript-eslint/types" "7.2.0"
-    "@typescript-eslint/visitor-keys" "7.2.0"
+    "@typescript-eslint/types" "6.21.0"
+    "@typescript-eslint/visitor-keys" "6.21.0"
 
-"@typescript-eslint/types@7.2.0":
-  "integrity" "sha512-XFtUHPI/abFhm4cbCDc5Ykc8npOKBSJePY3a3s+lwumt7XWJuzP5cZcfZ610MIPHjQjNsOLlYK8ASPaNG8UiyA=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/@typescript-eslint/types/-/types-7.2.0.tgz"
-  "version" "7.2.0"
+"@typescript-eslint/types@6.21.0":
+  "integrity" "sha512-1kFmZ1rOm5epu9NZEZm1kckCDGj5UJEf7P1kliH4LKu/RkwpsfqqGmY2OOcUs18lSlQBKLDYBOGxRVtrMN5lpg=="
+  "resolved" "https://registry.npmjs.org/@typescript-eslint/types/-/types-6.21.0.tgz"
+  "version" "6.21.0"
 
-"@typescript-eslint/typescript-estree@7.2.0":
-  "integrity" "sha512-cyxS5WQQCoBwSakpMrvMXuMDEbhOo9bNHHrNcEWis6XHx6KF518tkF1wBvKIn/tpq5ZpUYK7Bdklu8qY0MsFIA=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/@typescript-eslint/typescript-estree/-/typescript-estree-7.2.0.tgz"
-  "version" "7.2.0"
+"@typescript-eslint/typescript-estree@6.21.0":
+  "integrity" "sha512-6npJTkZcO+y2/kr+z0hc4HwNfrrP4kNYh57ek7yCNlrBjWQ1Y0OS7jiZTkgumrvkX5HkEKXFZkkdFNkaW2wmUQ=="
+  "resolved" "https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-6.21.0.tgz"
+  "version" "6.21.0"
   dependencies:
-    "@typescript-eslint/types" "7.2.0"
-    "@typescript-eslint/visitor-keys" "7.2.0"
+    "@typescript-eslint/types" "6.21.0"
+    "@typescript-eslint/visitor-keys" "6.21.0"
     "debug" "^4.3.4"
     "globby" "^11.1.0"
     "is-glob" "^4.0.3"
@@ -1814,12 +1848,12 @@
     "semver" "^7.5.4"
     "ts-api-utils" "^1.0.1"
 
-"@typescript-eslint/visitor-keys@7.2.0":
-  "integrity" "sha512-c6EIQRHhcpl6+tO8EMR+kjkkV+ugUNXOmeASA1rlzkd8EPIriavpWoiEz1HR/VLhbVIdhqnV6E7JZm00cBDx2A=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/@typescript-eslint/visitor-keys/-/visitor-keys-7.2.0.tgz"
-  "version" "7.2.0"
+"@typescript-eslint/visitor-keys@6.21.0":
+  "integrity" "sha512-JJtkDduxLi9bivAB+cYOVMtbkqdPOhZ+ZI5LC47MIRrDV4Yn2o+ZnW10Nkmr28xRpSpdJ6Sm42Hjf2+REYXm0A=="
+  "resolved" "https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-6.21.0.tgz"
+  "version" "6.21.0"
   dependencies:
-    "@typescript-eslint/types" "7.2.0"
+    "@typescript-eslint/types" "6.21.0"
     "eslint-visitor-keys" "^3.4.1"
 
 "@ungap/structured-clone@^1.2.0":
@@ -1942,7 +1976,7 @@
 
 "array-union@^2.1.0":
   "integrity" "sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/array-union/-/array-union-2.1.0.tgz"
+  "resolved" "https://registry.npmjs.org/array-union/-/array-union-2.1.0.tgz"
   "version" "2.1.0"
 
 "array.prototype.findlast@^1.2.5":
@@ -2184,7 +2218,7 @@
   "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/camelcase/-/camelcase-5.3.1.tgz"
   "version" "5.3.1"
 
-"caniuse-lite@^1.0.30001579":
+"caniuse-lite@^1.0.30001406":
   "integrity" "sha512-5ExiE3qQN6oF8Clf8ifIDcMRCRE/dMGcETG/XGMD8/XiXm6HXQgQTh1yZYLXXpSOsEUlJm1Xr7kGULZTuGtP/w=="
   "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/caniuse-lite/-/caniuse-lite-1.0.30001690.tgz"
   "version" "1.0.30001690"
@@ -2378,7 +2412,7 @@
 
 "dir-glob@^3.0.1":
   "integrity" "sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/dir-glob/-/dir-glob-3.0.1.tgz"
+  "resolved" "https://registry.npmjs.org/dir-glob/-/dir-glob-3.0.1.tgz"
   "version" "3.0.1"
   dependencies:
     "path-type" "^4.0.0"
@@ -2563,14 +2597,14 @@
   "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz"
   "version" "4.0.0"
 
-"eslint-config-next@14.2.7":
-  "integrity" "sha512-ppmy+QdQ7qkuCHGDlPjWaoSbJvjGpWSBD4zEW8f1eWlxYXYpZK7QzBOer1EcHKT3uKhlY1JjUus9g7Kvv712rw=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/eslint-config-next/-/eslint-config-next-14.2.7.tgz"
-  "version" "14.2.7"
+"eslint-config-next@13.5.8":
+  "integrity" "sha512-EpNu08GB4KT377oDOQ6bi6icQFBgXcynqCE2neCu138k2Hsfr2i+5goUrRhz3YReDXB3YhelvQJLxm2apr3Gdw=="
+  "resolved" "https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-13.5.8.tgz"
+  "version" "13.5.8"
   dependencies:
-    "@next/eslint-plugin-next" "14.2.7"
+    "@next/eslint-plugin-next" "13.5.8"
     "@rushstack/eslint-patch" "^1.3.3"
-    "@typescript-eslint/parser" "^5.4.2 || ^6.0.0 || 7.0.0 - 7.2.0"
+    "@typescript-eslint/parser" "^5.4.2 || ^6.0.0"
     "eslint-import-resolver-node" "^0.3.6"
     "eslint-import-resolver-typescript" "^3.5.2"
     "eslint-plugin-import" "^2.28.1"
@@ -2696,7 +2730,7 @@
   "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/eslint-visitor-keys/-/eslint-visitor-keys-3.4.3.tgz"
   "version" "3.4.3"
 
-"eslint@*", "eslint@^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8 || ^9", "eslint@^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9", "eslint@^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7", "eslint@^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0", "eslint@^6.0.0 || ^7.0.0 || >=8.0.0", "eslint@^7.23.0 || ^8.0.0", "eslint@^8", "eslint@^8.56.0":
+"eslint@*", "eslint@^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8 || ^9", "eslint@^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9", "eslint@^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7", "eslint@^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0", "eslint@^6.0.0 || ^7.0.0 || >=8.0.0", "eslint@^7.0.0 || ^8.0.0", "eslint@^7.23.0 || ^8.0.0", "eslint@^8":
   "integrity" "sha512-ypowyDxpVSYpkXr9WPv2PAZCtNip1Mv5KTW0SCurXv/9iOpcrH9PaqUElksqEB6pChqHGDRCFTyrZlGhnLNGiA=="
   "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/eslint/-/eslint-8.57.1.tgz"
   "version" "8.57.1"
@@ -2979,6 +3013,11 @@
   dependencies:
     "is-glob" "^4.0.3"
 
+"glob-to-regexp@^0.4.1":
+  "integrity" "sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw=="
+  "resolved" "https://registry.npmjs.org/glob-to-regexp/-/glob-to-regexp-0.4.1.tgz"
+  "version" "0.4.1"
+
 "glob@^10.3.10":
   "integrity" "sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg=="
   "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/glob/-/glob-10.4.5.tgz"
@@ -3003,16 +3042,17 @@
     "once" "^1.3.0"
     "path-is-absolute" "^1.0.0"
 
-"glob@10.3.10":
-  "integrity" "sha512-fa46+tv1Ak0UPK1TOy/pZrIybNNt4HCv7SDzwyfiOZkvZLEbjsZkJBPtDHVshZjbecAoAGSC20MjLDG/qr679g=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/glob/-/glob-10.3.10.tgz"
-  "version" "10.3.10"
+"glob@7.1.7":
+  "integrity" "sha512-OvD9ENzPLbegENnYP5UUfJIirTg4+XwMWGaQfQTY0JenxNvvIKP3U3/tAQSPIu/lHxXYSZmpXlUHeqAIdKzBLQ=="
+  "resolved" "https://registry.npmjs.org/glob/-/glob-7.1.7.tgz"
+  "version" "7.1.7"
   dependencies:
-    "foreground-child" "^3.1.0"
-    "jackspeak" "^2.3.5"
-    "minimatch" "^9.0.1"
-    "minipass" "^5.0.0 || ^6.0.2 || ^7.0.0"
-    "path-scurry" "^1.10.1"
+    "fs.realpath" "^1.0.0"
+    "inflight" "^1.0.4"
+    "inherits" "2"
+    "minimatch" "^3.0.4"
+    "once" "^1.3.0"
+    "path-is-absolute" "^1.0.0"
 
 "globals@^13.19.0":
   "integrity" "sha512-AhO5QUcj8llrbG09iWhPU2B204J1xnPeL8kQmVorSsy+Sjj1sk8gIyh6cUocGmH4L0UuhAJy+hJMRA4mgA4mFQ=="
@@ -3031,7 +3071,7 @@
 
 "globby@^11.1.0":
   "integrity" "sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/globby/-/globby-11.1.0.tgz"
+  "resolved" "https://registry.npmjs.org/globby/-/globby-11.1.0.tgz"
   "version" "11.1.0"
   dependencies:
     "array-union" "^2.1.0"
@@ -3046,12 +3086,12 @@
   "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/gopd/-/gopd-1.2.0.tgz"
   "version" "1.2.0"
 
-"graceful-fs@^4.1.6", "graceful-fs@^4.2.0":
+"graceful-fs@^4.1.2", "graceful-fs@^4.2.4":
   "integrity" "sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ=="
   "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/graceful-fs/-/graceful-fs-4.2.11.tgz"
   "version" "4.2.11"
 
-"graceful-fs@^4.2.11", "graceful-fs@^4.2.4":
+"graceful-fs@^4.1.6", "graceful-fs@^4.2.0":
   "integrity" "sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ=="
   "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/graceful-fs/-/graceful-fs-4.2.11.tgz"
   "version" "4.2.11"
@@ -3388,15 +3428,6 @@
     "reflect.getprototypeof" "^1.0.8"
     "set-function-name" "^2.0.2"
 
-"jackspeak@^2.3.5":
-  "integrity" "sha512-N3yCS/NegsOBokc8GAdM8UcmfsKiSS8cipheD/nivzr700H+nsMOxJjQnvwOcRYVuFkdH0wGUvW2WbXGmrZGbQ=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/jackspeak/-/jackspeak-2.3.6.tgz"
-  "version" "2.3.6"
-  dependencies:
-    "@isaacs/cliui" "^8.0.2"
-  optionalDependencies:
-    "@pkgjs/parseargs" "^0.11.0"
-
 "jackspeak@^3.1.2":
   "integrity" "sha512-OGlZQpz2yfahA/Rd1Y8Cd9SIEsqvXkLVoSw/cgwhnhFMDbsQFeZYoJJ7bIZBS9BcamUW96asq/npPWugM+RQBw=="
   "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/jackspeak/-/jackspeak-3.4.3.tgz"
@@ -3580,19 +3611,12 @@
     "braces" "^3.0.3"
     "picomatch" "^2.3.1"
 
-"minimatch@^3.0.5", "minimatch@^3.1.1", "minimatch@^3.1.2":
+"minimatch@^3.0.4", "minimatch@^3.0.5", "minimatch@^3.1.1", "minimatch@^3.1.2":
   "integrity" "sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw=="
   "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/minimatch/-/minimatch-3.1.2.tgz"
   "version" "3.1.2"
   dependencies:
     "brace-expansion" "^1.1.7"
-
-"minimatch@^9.0.1":
-  "integrity" "sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/minimatch/-/minimatch-9.0.5.tgz"
-  "version" "9.0.5"
-  dependencies:
-    "brace-expansion" "^2.0.1"
 
 "minimatch@^9.0.4":
   "integrity" "sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow=="
@@ -3603,7 +3627,7 @@
 
 "minimatch@9.0.3":
   "integrity" "sha512-RHiac9mvaRw0x3AYRgDC1CxAP7HTcNrrECeA8YYJeWnpo+2Q5CegtZjaotWTWxDG3UeGA1coE05iH1mPjT/2mg=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/minimatch/-/minimatch-9.0.3.tgz"
+  "resolved" "https://registry.npmjs.org/minimatch/-/minimatch-9.0.3.tgz"
   "version" "9.0.3"
   dependencies:
     "brace-expansion" "^2.0.1"
@@ -3642,28 +3666,28 @@
   "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/natural-compare/-/natural-compare-1.4.0.tgz"
   "version" "1.4.0"
 
-"next@>=13.5.0 <16.0.0", "next@14.2.7":
-  "integrity" "sha512-4Qy2aK0LwH4eQiSvQWyKuC7JXE13bIopEQesWE0c/P3uuNRnZCQanI0vsrMLmUQJLAto+A+/8+sve2hd+BQuOQ=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/next/-/next-14.2.7.tgz"
-  "version" "14.2.7"
+"next@>=13.5.0 <16.0.0", "next@13.5.8":
+  "integrity" "sha512-VlR7FaXpSibCs7ujOqStaDFTGSdX/NvWgLDcd47oiHUe8i63ZtNkX9intgcYAu/MxpaeEGinHaMB5mwxuzglKw=="
+  "resolved" "https://registry.npmjs.org/next/-/next-13.5.8.tgz"
+  "version" "13.5.8"
   dependencies:
-    "@next/env" "14.2.7"
-    "@swc/helpers" "0.5.5"
+    "@next/env" "13.5.8"
+    "@swc/helpers" "0.5.2"
     "busboy" "1.6.0"
-    "caniuse-lite" "^1.0.30001579"
-    "graceful-fs" "^4.2.11"
+    "caniuse-lite" "^1.0.30001406"
     "postcss" "8.4.31"
     "styled-jsx" "5.1.1"
+    "watchpack" "2.4.0"
   optionalDependencies:
-    "@next/swc-darwin-arm64" "14.2.7"
-    "@next/swc-darwin-x64" "14.2.7"
-    "@next/swc-linux-arm64-gnu" "14.2.7"
-    "@next/swc-linux-arm64-musl" "14.2.7"
-    "@next/swc-linux-x64-gnu" "14.2.7"
-    "@next/swc-linux-x64-musl" "14.2.7"
-    "@next/swc-win32-arm64-msvc" "14.2.7"
-    "@next/swc-win32-ia32-msvc" "14.2.7"
-    "@next/swc-win32-x64-msvc" "14.2.7"
+    "@next/swc-darwin-arm64" "13.5.8"
+    "@next/swc-darwin-x64" "13.5.8"
+    "@next/swc-linux-arm64-gnu" "13.5.8"
+    "@next/swc-linux-arm64-musl" "13.5.8"
+    "@next/swc-linux-x64-gnu" "13.5.8"
+    "@next/swc-linux-x64-musl" "13.5.8"
+    "@next/swc-win32-arm64-msvc" "13.5.8"
+    "@next/swc-win32-ia32-msvc" "13.5.8"
+    "@next/swc-win32-x64-msvc" "13.5.8"
 
 "normalize-path@^3.0.0", "normalize-path@~3.0.0":
   "integrity" "sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA=="
@@ -3833,7 +3857,7 @@
   "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/path-parse/-/path-parse-1.0.7.tgz"
   "version" "1.0.7"
 
-"path-scurry@^1.10.1", "path-scurry@^1.11.1":
+"path-scurry@^1.11.1":
   "integrity" "sha512-Xa4Nw17FS9ApQFJ9umLiJS4orGjm7ZzwUrwamcGQuHSzDyth9boKDaycYdDcZDuqYATXw4HFXgaqWTctW/v1HA=="
   "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/path-scurry/-/path-scurry-1.11.1.tgz"
   "version" "1.11.1"
@@ -3843,7 +3867,7 @@
 
 "path-type@^4.0.0":
   "integrity" "sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/path-type/-/path-type-4.0.0.tgz"
+  "resolved" "https://registry.npmjs.org/path-type/-/path-type-4.0.0.tgz"
   "version" "4.0.0"
 
 "picocolors@^1.0.0", "picocolors@^1.1.1":
@@ -4267,7 +4291,7 @@
 
 "slash@^3.0.0":
   "integrity" "sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/slash/-/slash-3.0.0.tgz"
+  "resolved" "https://registry.npmjs.org/slash/-/slash-3.0.0.tgz"
   "version" "3.0.0"
 
 "slice-ansi@^4.0.0":
@@ -4536,7 +4560,7 @@
 
 "ts-api-utils@^1.0.1":
   "integrity" "sha512-i3eMG77UTMD0hZhgRS562pv83RC6ukSAC2GMNWc+9dieh/+jDM5u5YG+NHX6VNDRHQcHwmsTHctP9LhbC3WxVw=="
-  "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/ts-api-utils/-/ts-api-utils-1.4.3.tgz"
+  "resolved" "https://registry.npmjs.org/ts-api-utils/-/ts-api-utils-1.4.3.tgz"
   "version" "1.4.3"
 
 "ts-interface-checker@^0.1.9":
@@ -4687,6 +4711,14 @@
   "integrity" "sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA=="
   "resolved" "https://artifactory.coxautoinc.com/artifactory/api/npm/man-npm/uuid/-/uuid-9.0.1.tgz"
   "version" "9.0.1"
+
+"watchpack@2.4.0":
+  "integrity" "sha512-Lcvm7MGST/4fup+ifyKi2hjyIAwcdI4HRgtvTpIUxBRhB+RFtUh8XtDOxUfctVCnhVi+QQj49i91OyvzkJl6cg=="
+  "resolved" "https://registry.npmjs.org/watchpack/-/watchpack-2.4.0.tgz"
+  "version" "2.4.0"
+  dependencies:
+    "glob-to-regexp" "^0.4.1"
+    "graceful-fs" "^4.1.2"
 
 "which-boxed-primitive@^1.1.0", "which-boxed-primitive@^1.1.1":
   "integrity" "sha512-TbX3mj8n0odCBFVlY8AxkqcHASw3L60jIuF8jFP78az3C2YhmGvqbHBpAjTRH2/xqYunrJ9g1jSyjCjpoWzIAA=="
