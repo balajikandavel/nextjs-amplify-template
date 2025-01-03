@@ -43,11 +43,13 @@ export class WebAppStack extends cdk.Stack {
             preBuild: {
               commands: [
                 'set -x',
+                'export DEBUG=*',
                 'yarn --version',
                 'node --version',
                 'pwd',
                 'ls -la',
-                'yarn install --frozen-lockfile',
+                'env | sort',
+                'yarn install --frozen-lockfile --verbose',
                 'yarn add encoding',
                 'yarn list typescript @types/node',
                 'ls -la node_modules/.bin/tsc || true'
@@ -68,9 +70,7 @@ export class WebAppStack extends cdk.Stack {
           },
           artifacts: {
             baseDirectory: '.next/standalone',
-            files: [
-              '**/*'
-            ]
+            files: ['**/*']
           },
           cache: {
             paths: [
@@ -84,7 +84,11 @@ export class WebAppStack extends cdk.Stack {
       environmentVariables: {
         NODE_ENV: 'production',
         PORT: '8080',
-        DEBUG: '*'
+        DEBUG: '*',
+        NODE_DEBUG: 'DEBUG',
+        NEXT_DEBUG: 'true',
+        NEXT_TELEMETRY_DEBUG: '1',
+        VERBOSE: 'true'
       }
     });
 
@@ -95,6 +99,11 @@ export class WebAppStack extends cdk.Stack {
       environmentVariables: {
         NODE_ENV: 'production',
         PORT: '8080',
+        DEBUG: '*',
+        NODE_DEBUG: 'DEBUG',
+        NEXT_DEBUG: 'true',
+        NEXT_TELEMETRY_DEBUG: '1',
+        VERBOSE: 'true',
         OPENAI_API_KEY: getParameter.getResponseField('Parameter.Value')
       }
     });
